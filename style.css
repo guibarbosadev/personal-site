@@ -1,0 +1,383 @@
+/* Default css */
+
+:root{
+    --brancinza: #e7e7e7;
+    --cinzinha: #555555;
+    --cinza: #343436;
+    --black: #272727;
+    --azulzinho: dodgerblue;
+    --pretinho: #1D1F20;
+}
+
+*{
+    font-family: 'Montserrat', 'Lato';
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+    font-size: 1.5em;
+    margin: 0 0 5px 0;
+}
+
+p{
+    margin:0;
+    font-weight: 600;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    min-height:calc(100vh - 50px);
+    margin:0;
+    overflow-y: auto;
+}
+
+.wrapper{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    min-height:100vh;
+    max-height: 100vh;
+}
+
+.title{
+    font-weight: 600;
+    color: crimson;
+    font-size: 28px;
+}
+
+.active{
+    background: #555555;
+}
+.red{
+    color: crimson;
+}
+
+.knowfoot{
+    background: url('images/knowfoot.jpg');
+}
+.casathomaz{
+    background: url('images/casathomaz.jpg');
+}
+
+.calculadora{
+    background: url('images/calculadora.jpg');
+}
+
+.doacao{
+    background: url('images/doacao3.jpg');
+}
+
+/* Side Menu */
+
+.side-menu{
+    background: black;
+    width:100px;
+    padding: 20px 0 0 0;
+    cursor: pointer;
+}
+
+.side-menu > ul{
+    position: fixed;
+    width: 100px;
+    display: grid;;
+    justify-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.side-menu > ul > li{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 100px;
+    min-height: 84px;
+    margin-bottom: 5px;
+}
+
+.side-menu > ul > li > a{
+    text-align:center;
+    text-decoration: none;
+}
+
+.side-menu > ul > li > a > svg{
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+    fill: white;
+}
+
+.side-menu > ul > li > a > span{
+    display:block;
+    font-size: 0.8em;
+    color: white;
+    transform: translateX(0);
+    transition-duration: 0.6s;
+    transition-delay: 0.2s;
+}
+
+
+/* Side Menu Hover Effects */
+.side-menu:hover > ul > li > a > svg{
+    fill: crimson;
+}
+
+.side-menu:hover > ul > li > a > span{
+    fill: crimson;
+    transform: translateX(0);
+}
+
+.hamburguer{
+    position:fixed;
+    cursor:pointer;
+    padding:0 0 10px 10px;
+}
+
+.hamburguer:after {
+    display:block;
+    content:'';
+    height: 1px;
+    width: 55px;
+    margin-left:-10px;
+    background: whitesmoke;
+}
+
+.hamburguer-menu-line{
+    width:30px;
+    height:4px;
+    margin: 5px 0;
+    background: whitesmoke;
+    border-radius:3px;
+}
+
+
+/* Content */
+.content{
+    background: #FAFAFA;
+    grid-column: 2 / span 1;
+    display:grid;
+    grid-template-rows: 1fr;
+}
+
+/* Quem sou eu? */
+
+.about{
+    height: 100vh;
+    min-height:100vh;
+    padding:50px 150px;
+    line-height: 26.4px;
+    color: white;
+    background: var(--pretinho);
+    display:grid;
+    grid-gap:20px;
+    grid-template-rows:auto minmax(150px,250px) auto auto;
+    justify-items:center;
+    align-content:flex-start;
+    text-align:center;
+}
+
+.about > h2{
+    font-size: 32px;
+}
+
+.about > img{
+    max-height:100%;
+    border-radius: 50%;
+}
+.about > p{
+    font-size: 1.4em;
+}
+.about > .about-texto{
+    display:block;
+    font-size: 1.2em;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Onde quero chegar?  */
+
+.explicacoes{
+    color: var(--cinza);;
+    padding: 40px 50px;
+    display:grid;
+    grid-gap:30px;
+    justify-items:center;
+}
+
+.explicacoes > p{
+    max-width:1000px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Habilidades */
+.habilidades{
+    display:grid;
+    grid-gap: 20px;
+    padding:30px 100px;
+    text-align:center;
+    margin-top:10px;
+}
+
+
+.habilidades_list{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.habilidades_list > li{
+    height: 40px;
+    margin-right: 20px;
+}
+.habilidade {
+    padding: 10px 15px;
+    color: white;
+    background: black;
+    white-space: nowrap;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px -15px rgba(0, 0, 0, .4);
+}
+
+/* Portfólio */
+
+.portfolio{
+    display:grid;
+    grid-gap: 30px;
+    padding:40px 100px;
+    text-align:center;
+}
+
+.portfolio-items{
+    display:grid;
+    align-items: flex-start;
+    grid-gap: 80px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 450px));
+}
+
+.portfolio-item{
+    border-radius:3px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12);
+    border: 3px solid #d6d6d6;
+    transition: all .5s ease;
+    background: #cac8c8;
+}
+
+.portfolio-item-img{
+    display:grid;
+    grid-template-columns: 1;
+    grid-auto-rows: 1;
+    min-height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position:relative;
+    cursor: pointer;
+}
+
+.portfolio-item-img > .shadow{
+    position:absolute;
+    visibility: hidden;
+    grid-column: 1 / -1;
+    grid-row:  1 / -1;
+    min-height:100%;
+    min-width:100%;
+    background: rgba(0,0,0,0.2);
+    z-index:2;
+}
+
+.portfolio-item-img:hover .shadow{
+    visibility: visible;
+}
+
+
+.portfolio-item > img{
+    min-height:180px;
+}
+
+.portfolio-item-text{
+    text-align: left;
+    padding:10px 20px 20px 10px;
+    background: white;
+}
+
+.portfolio-item-text > h2{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.portfolio-item-text > p{
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.portfolio-item-footer{
+    min-height:40px;
+    background: #F4F4F4;
+    padding:0 15px 0 10px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-item-footer > h2{
+    flex-grow: 0;
+    flex-shrink: 0; 
+    font-size: 1em;
+    padding:5px 10px;
+    margin:0 10px;
+}
+
+/* Redes Sociais */
+.redes-sociais{
+    background: var(--pretinho);
+    display:grid;
+    grid-template-columns: repeat(2, 32px); 
+    grid-gap: 30px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+.redes-sociais > a{
+    cursor: pointer;
+}
+
+/* Media Queries */
+
+@media (max-width: 1000px)
+{
+    .portfolio{
+        justify-items: center;
+    }
+}
+
+@media (max-width: 800px)
+{
+    .about{
+        padding: 50px 50px;
+
+    }
+    
+    .portfolio{
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 700px)
+{
+    .side-menu{
+        width: 60px;
+    }
+    .side-menu > ul{
+        width: 60px;
+    }
+    .side-menu > ul > li{
+
+        min-width: 60px;
+    }
+    .side-menu > ul > li > a > span{
+        font-size: 0.6em;
+    }
+}

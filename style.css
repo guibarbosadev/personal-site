@@ -67,6 +67,23 @@ body{
     background: url('images/doacao3.jpg');
 }
 
+.flag{
+    position:absolute;
+    cursor: pointer;
+    right: 15px;
+    top: 15px;
+    min-width: 40px;
+    min-height: 30px;
+    max-width: 40px;
+    max-height: 30px;
+}
+
+.flag img{
+    min-width: 40px;
+    min-height: 30px;
+    max-width: 40px;
+    max-height: 30px;
+}
 /* Side Menu */
 
 .side-menu{

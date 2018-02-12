@@ -362,6 +362,24 @@ body{
     cursor: pointer;
 }
 
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1D1F20;
+}
+.footer h2{
+    font-size: 1em;
+    color: white;
+}
+.footer a {
+    color: white;
+    font-size: 0.9em;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+
 /* Media Queries */
 
 @media (max-width: 1000px)

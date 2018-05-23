@@ -1,15 +1,6 @@
 /* Default css */
 
-:root{
-    --brancinza: #e7e7e7;
-    --cinzinha: #555555;
-    --cinza: #343436;
-    --black: #272727;
-    --azulzinho: dodgerblue;
-    --pretinho: #1D1F20;
-}
-
-*{
+*{	
     font-family: 'Montserrat', 'Lato';
     box-sizing: border-box;
 }
@@ -182,7 +173,7 @@ body{
     padding:50px 150px;
     line-height: 26.4px;
     color: white;
-    background: var(--pretinho);
+    background: #1D1F20;
     display:grid;
     grid-gap:20px;
     grid-template-rows:auto minmax(150px,250px) auto auto;
@@ -212,7 +203,7 @@ body{
 /* Onde quero chegar?  */
 
 .explicacoes{
-    color: var(--cinza);;
+    color: #343436;
     padding: 40px 50px;
     display:grid;
     grid-gap:30px;
@@ -348,7 +339,7 @@ body{
 
 /* Redes Sociais */
 .redes-sociais{
-    background: var(--pretinho);
+    background: #1D1F20;
     display:grid;
     grid-template-columns: repeat(2, 32px); 
     grid-gap: 30px;
@@ -382,14 +373,14 @@ body{
 
 /* Media Queries */
 
-@media (max-width: 1000px)
+@media only screen and (max-width: 1000px)
 {
     .portfolio{
         justify-items: center;
     }
 }
 
-@media (max-width: 800px)
+@media only screen and (max-width: 800px)
 {
     .about{
         padding: 50px 50px;
@@ -401,7 +392,7 @@ body{
     }
 }
 
-@media (max-width: 700px)
+@media only screen and (max-width: 700px)
 {
     .side-menu{
         width: 60px;
